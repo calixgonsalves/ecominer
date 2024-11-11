@@ -1,0 +1,162 @@
+div {
+  width: 300px; /* Increased width */
+  height: 150px; /* Increased height */
+  padding: 10px;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+div {
+  width: 300px;
+  height: 150px;
+  padding: 20px; /* Increased padding */
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Base Styling */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #e8f5e9; /* Light green background for eco-friendly feel */
+}
+
+/* Root container to occupy the full screen */
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Header */
+h1 {
+  color: #238628; /* Dark green */
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* ActionList Styling */
+.ActionList {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Styling for each action item */
+.ActionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f9f0; /* Very light green */
+  border: 1px solid #c5e1c5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Text and button within ActionItem */
+.ActionItem h3 {
+  color: #388e3c;
+  font-size: 1.1em;
+}
+
+.ActionItem p {
+  color: #4caf50;
+  font-size: 0.9em;
+}
+
+.ActionItem button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ActionItem button:hover {
+  background-color: #43a047;
+}
+
+/* ImpactSummary Styling */
+.ImpactSummary {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.ImpactSummary h2 {
+  color: #117d60;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.TrackedActions {
+  margin-top: 10px;
+}
+
+.TrackedActionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #dcedc8;
+  border: 1px solid #aed581;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.TrackedActionItem p {
+  color: #558b2f;
+  font-size: 1em;
+}
+
+.TrackedActionItem button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.TrackedActionItem button:hover {
+  background-color: #e53935;
+}
+
+/* Clear Button */
+button.clear {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.clear:hover {
+  background-color: #fb8c00;
+}
+
+/* Conditional Rendering Message */
+.NoActionsMessage {
+  color: #757575;
+  font-size: 1em;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}

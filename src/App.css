@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Base Styling */
+body {
+  background-color: #e8f5e9; /* Light green background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d0e8d0;
+}
+
+/* Header */
+h1 {
+  color: #2e7d32; /* Dark green */
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* ActionList Styling */
+.ActionList {
+  margin-top: 20px;
+}
+
+.ActionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f9f0; /* Very light green */
+  border: 1px solid #c5e1c5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.ActionItem h3 {
+  color: #388e3c; /* Medium green */
+  font-size: 1.1em;
+}
+
+.ActionItem p {
+  color: #4caf50; /* Green */
+  font-size: 0.9em;
+}
+
+.ActionItem button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ActionItem button:hover {
+  background-color: #43a047;
+}
+
+/* ImpactSummary Styling */
+.ImpactSummary {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ImpactSummary h2 {
+  color: #2e7d32;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.TrackedActions {
+  margin-top: 10px;
+}
+
+.TrackedActionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #dcedc8;
+  border: 1px solid #aed581;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.TrackedActionItem p {
+  color: #558b2f;
+  font-size: 1em;
+}
+
+.TrackedActionItem button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.TrackedActionItem button:hover {
+  background-color: #e53935;
+}
+
+/* Clear Button */
+button.clear {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.clear:hover {
+  background-color: #fb8c00;
+}
+
+/* Conditional Rendering Message */
+.NoActionsMessage {
+  color: #757575;
+  font-size: 1em;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+
