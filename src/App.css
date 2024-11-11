@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Base Styling */
+/* Body Styling */
 body {
-  background-color: #e8f5e9; /* Light green background */
+  background-color: #eaf7ed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,132 +16,123 @@ body {
   padding: 20px;
 }
 
-#root {
+#app-root {
   width: 100%;
-  max-width: 600px;
-  background-color: #ffffff;
-  border-radius: 8px;
+  max-width: 800px;
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #d0e8d0;
+  color: #1b5e20;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
-h1 {
-  color: #2e7d32; /* Dark green */
+/* Header Styling */
+.header {
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-/* ActionList Styling */
-.ActionList {
-  margin-top: 20px;
+.header h1 {
+  color: #388e3c;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
-.ActionItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #f0f9f0; /* Very light green */
-  border: 1px solid #c5e1c5;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.ActionItem h3 {
-  color: #388e3c; /* Medium green */
+.header p {
+  color: #4caf50;
   font-size: 1.1em;
+  margin-top: 5px;
 }
 
-.ActionItem p {
-  color: #4caf50; /* Green */
-  font-size: 0.9em;
+/* Action List Styling */
+.action-list {
+  margin-bottom: 20px;
 }
 
-.ActionItem button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.ActionItem button:hover {
-  background-color: #43a047;
-}
-
-/* ImpactSummary Styling */
-.ImpactSummary {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.ImpactSummary h2 {
-  color: #2e7d32;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.TrackedActions {
-  margin-top: 10px;
-}
-
-.TrackedActionItem {
+.action-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #dcedc8;
-  border: 1px solid #aed581;
-  border-radius: 5px;
+  background-color: #f1f8f4;
+  padding: 15px;
+  border-radius: 8px;
   margin-bottom: 10px;
+  border: 1px solid #a5d6a7;
 }
 
-.TrackedActionItem p {
-  color: #558b2f;
-  font-size: 1em;
+.action-name {
+  font-weight: bold;
+  color: #1b5e20;
 }
 
-.TrackedActionItem button {
-  background-color: #f44336;
+.carbon-reduction {
+  color: #388e3c;
+}
+
+.add-button {
+  background-color: #2e7d32;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.action-count {
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+/* Impact Summary Styling */
+.impact-summary {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.summary-text {
+  font-size: 1.2em;
+  color: #1b5e20;
+}
+
+.total-reduction {
+  font-weight: bold;
+  color: #388e3c;
+}
+
+/* Tracked Actions Styling */
+.tracked-action-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f8f4;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #a5d6a7;
+}
+
+.delete-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.TrackedActionItem button:hover {
-  background-color: #e53935;
-}
-
-/* Clear Button */
-button.clear {
-  background-color: #ff9800;
+/* Clear Button Styling */
+.clear-btn {
+  background-color:red;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px;
   font-size: 1em;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-top: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-button.clear:hover {
-  background-color: #fb8c00;
+.clear-btn:hover {
+  background-color: #e57373;
 }
-
-/* Conditional Rendering Message */
-.NoActionsMessage {
-  color: #757575;
-  font-size: 1em;
-  text-align: center;
-  font-style: italic;
-  margin-top: 20px;
-}
-
-

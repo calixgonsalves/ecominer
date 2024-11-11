@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ActionList from './ActionList';
 import ImpactSummary from './ImpactSummary';
 import TrackedActions from './TrackedActions';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -49,30 +50,56 @@ class App extends Component {
   };
 
   handleRemoveAction = (action) => {
-    const updatedTrackedActions = this.state.trackedActions.filter((a) => a.name !== action.name);
-    const updatedTotalCarbonReduction = this.state.totalCarbonReduction - action.carbonReduction;
+    const updatedTrackedActions = this.state.trackedActions.filter(
+      (a) => a.name !== action.name
+    );
+    const updatedTotalCarbonReduction =
+      this.state.totalCarbonReduction - action.carbonReduction;
     this.setState({
       trackedActions: updatedTrackedActions,
       totalCarbonReduction: updatedTotalCarbonReduction,
     });
   };
 
-
-
-
-
   render() {
     return (
-      <div>
-        <h1>Welocome to Ecominer</h1>
-        <h1>Please choose your desired Actions</h1>
-        <ActionList actions={this.state.actions} onAddAction={this.handleAddAction} />
-        <ImpactSummary totalCarbonReduction={this.state.totalCarbonReduction} />
-        <TrackedActions
-          trackedActions={this.state.trackedActions}
-          onRemoveAction={this.handleRemoveAction}
-        />
-        <button onClick={this.handleClearActions}>Clear</button>
+      <div id="app-root">
+        <header className="header">
+          <h1>Ecominer</h1>
+          <p>Track your eco-friendly actions and reduce your carbon footprint.</p>
+        </header>
+        
+        <section className="content">
+          <div className="ActionList">
+            <h2>Available Actions</h2>
+            <ActionList 
+              actions={this.state.actions} 
+              onAddAction={this.handleAddAction} 
+            />
+          </div>
+
+          <div className="ImpactSummary">
+            <h2>Total Impact</h2>
+            <ImpactSummary 
+              totalCarbonReduction={this.state.totalCarbonReduction} 
+            />
+          </div>
+
+          <div className="TrackedActions">
+            <h2>Your Actions</h2>
+            <TrackedActions
+              trackedActions={this.state.trackedActions}
+              onRemoveAction={this.handleRemoveAction}
+            />
+          </div>
+
+          <button 
+            className="clear-btn" 
+            onClick={this.handleClearActions}
+          >
+            Clear All Actions
+          </button>
+        </section>
       </div>
     );
   }

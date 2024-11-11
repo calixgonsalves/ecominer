@@ -1,12 +1,13 @@
 // ImpactSummary.js
 import React from 'react';
+import './App.css';
 
 class ImpactSummary extends React.Component {
   render() {
     return (
-      <div>
+      <div className="impact-summary">
         <h2>Impact Summary</h2>
-        <p>You contributed to Total CO2 reduction of: {this.props.totalCarbonReduction} kg</p>
+        <p className="summary-text">You contributed to a Total CO2 reduction of: <span className="total-reduction">{this.props.totalCarbonReduction} kg</span></p>
       </div>
     );
   }
